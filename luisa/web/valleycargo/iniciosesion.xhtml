@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Bienvenidos</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </h:head>
+    <f:event  listener="#{usuariocontrolador.inicioSesion()}" type="preRenderView" ></f:event>
+    <h:body>
+      
+          <nav>
+  <div class="nav-wrapper">
+    <img class="circle responsive-img" src="/img/3.jpg" alt=" "></img>
+  <ul class="right hide-on-med-and-down">
+
+                        <li class="active-link" >
+                            <h:link outcome="Somos.xhtml" value="Quienes Somos"></h:link>
+                        </li>
+
+                        <li class="active-link" >
+                            <h:link outcome="servicios.xhtml" value="Servicios" ></h:link>
+                        </li>
+
+                        <li class="active-link" >
+                            <h:link outcome="contactenos.xhtml" value="Contactenos"></h:link>
+                        </li>
+                      
+                        <li class="active-link" >
+                            <h:link outcome="registro.xhtml" value="Registrarse"></h:link>
+                        </li>
+                       
+                       
+
+         </ul>
+    
+    </div>
+</nav>
+<div class="container">
+         
+        <div class="row">
+            <center><h2>Iniciar sesion</h2></center>
+    <h:form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <h:inputText id="icon_perm_identity" p:pattern="[0-9]{9,12}" value="#{usuariocontrolador.frdocumento}" class="validate"/>
+          <label for="icon_perm_identity">Documento</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">https</i>
+          <h:inputText id="icon_https" p:pattern="[0-9, a-z, A-Z],{9,12}" value="#{usuariocontrolador.frcontraseña}" class="validate"/>
+          <label for="icon_https">Contraseña</label>
+        </div>
+           <div class="modal-footer">
+               <h:commandButton   action="#{usuariocontrolador.inicioSesion()}" value="Ingresar" class="waves-effect waves-light btn-large"/> 
+      
+    </div>
+      </div>
+    </h:form>
+  </div>
+    
+    </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+        <script>$(document).ready(function() {
+    $('select').material_select();
+  });
+   </script>
+        <script>
+             $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+        </script>
+       
+    </h:body>
+    
+</html>
+

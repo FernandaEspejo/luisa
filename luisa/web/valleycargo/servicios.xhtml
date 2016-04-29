@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Bienvenidos</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </h:head>
+    <h:body>
+      
+          <nav>
+  <div class="nav-wrapper">
+    <img class="circle responsive-img" src="/img/3.jpg" alt=" "></img>
+  <ul class="right hide-on-med-and-down">
+
+                        <li class="active-link" >
+                            <h:link outcome="Somos.xhtml" value="Quienes Somos"></h:link>
+                        </li>
+
+                        <li class="active-link">
+                            <h:link outcome="contactenos.xhtml" value="Contactenos"></h:link>
+                        </li>
+                       <li class="active-link">
+                            <h:link outcome="iniciosesion.xhtml" value="Inicio Sesion"></h:link>
+                        </li>
+                        <li class="active-link">
+                            <h:link outcome="registro.xhtml" value="Registrarse"></h:link>
+                        </li>
+
+         </ul>
+    
+    </div>
+</nav>  
+<div id="right-part">
+
+        
+    <center><h1>Nuestros servicios.</h1></center>
+            <ul class="list">
+                <center><li>MySql = para sus bases de datos</li></center>
+                <center><li>Sql server = para sus bases de datos</li></center>
+               <center> <li>php my admin = para sus bases de datos</li></center>
+                
+                
+
+                
+
+            </ul>
+            <p></p>
+            
+            <h1></h1>
+            <p>  </p>
+
+           
+            
+            
+
+
+        </div>
+
+    <div id="footer">
+    	
+        <center><p>Gracias por su visita.</p></center>
+
+    </div>
+
+          
+          
+   
+          
+    
+         
+
+       
+       
+        
+        
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.js" type="text/javascript"></script>
+        <script src="../js/materialize.min.js" type="text/javascript"></script>
+        <script>$(document).ready(function() {
+    $('select').material_select();
+  });
+   </script>
+        <script>
+             $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+        </script>
+        <script> $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });</script>
+    </h:body>
+    
+</html>
+
